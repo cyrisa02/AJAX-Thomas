@@ -1,3 +1,32 @@
 body {
     background-color: aliceblue;
 }
+
+.users-container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+}
+
+.myPagination{
+    text-align: center;
+
+}
+
+.myPagination .btn{
+    padding: 5px;
+    background-color: cadetblue;
+    color: whitesmoke;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+
+.myPagination .btn.active{
+    
+    background-color: rgb(12, 3, 63);
+    color: whitesmoke;
+   
+
+}

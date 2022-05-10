@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AJAX</title>
-    <link rel="stylesheet" href="ajax.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="ajax.css" />
+  </head>
+  <body>
     <header>
-        <h1>AJAX</h1>
+      <h1>AJAX</h1>
     </header>
-    <p>Cliquer sur le bouton pour faire apparaitre le JSON</p>
+    <!-- <p>Cliquer sur le bouton pour faire apparaitre le JSON</p>
 
-    <button onclick="ShowUsers()">Afficher les utilisateurs</button>
-    <div id="allUtilisateurs"> 
-        <i>Ici seront affichés les utilisateurs</i>
+    <button onclick="ShowUsers()">Afficher les utilisateurs</button> -->
+    <div class="users-container" id="allUtilisateurs">
+      <i>Ici seront affichés les utilisateurs</i>
     </div>
-    <script src="ajax.js"></script>
-    
-</body>
 
+    <!-- <input type="number" id="numberPageUsers"> -->
+
+    <!-- <button onclick="ShowUsers()">Afficher les utilisateurs</button> -->
+    <!-- <div id="allUtilisateurs"> 
+        <i>Ici seront affichés les utilisateurs</i>
+    </div> -->
+
+    <div class="myPagination" id="pagination"></div>
+
+    <script src="ajax.js"></script>
+  </body>
 </html>

@@ -21,5 +21,20 @@ document.getElementById("allUtilisateurs").innerText = xhr.response;  permet d'a
 PARSER LE fichier json= récuper la réponse JSON 
 const object = JSON.parse(xhr.response);
 pour voir la structure de mon tableau:
-console log (object), on voit le array et data d'où 
+console log (object), on voit le array et data d'où  
 maintenant je veux lire cette liste donc forEach 
+
+Live 2 
+
+Choisir la BD - > modifier les paramètres de xhr.open("GET", "https://reqres.in/api/users?page=1");
+-> créer une focntion getUsers
+
+on a modifié tout le html du coup la fonction Showuser n'est plus appelé et plus utile, on appelle getUsers(1) pour la page 1
+
+on est obligé de mettre 
+document.addEventListener("DOMContentLoaded", function() {
+  getUsers(1);
+});
+pour une histoire de DOM-rendu-asynchrone
+
+
