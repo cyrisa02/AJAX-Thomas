@@ -37,4 +37,28 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 pour une histoire de DOM-rendu-asynchrone
 
+mise en place d'un loader
+https://loading.io/css
+
+copier et ajouter le css
+copier  le html
+puis dans le fichier .js, en ahut du fichier 
+const loader = '<div class="lds-ring"><div></div><div></div><div></div><div></div></div>';
+puis par défaut dans le html dans la div users-container 
+<div class="users-container" id="allUtilisateurs">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+      <i>Ici seront affichés les utilisateurs</i>
+    </div>
+
+    + dans le js
+
+    function getUsers(numeroPage) {
+  document.getElementById("allUtilisateurs").innerHTML = loader;
+  const xhr = new XMLHttpRequest();
+
+  attention au bcg qui peut être de la même couleur 
+   rajouter du délai avec delay
+    const url = "https://reqres.in/api/users?delay=2&page=" + numeroPage;
+
+
 

@@ -4,10 +4,14 @@
 //   getUsers(nbPage);
 // }
 
+const loader = '<div class="lds-ring"><div></div><div></div><div></div><div></div></div>';
+
+
 //Appel ajax et on continue
 function getUsers(numeroPage) {
+  document.getElementById("allUtilisateurs").innerHTML = loader;
   const xhr = new XMLHttpRequest();
-  const url = "https://reqres.in/api/users?page=" + numeroPage;
+  const url = "https://reqres.in/api/users?delay=2&page=" + numeroPage;
   xhr.open("GET", url);
 
   xhr.addEventListener("readystatechange", function () {
