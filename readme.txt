@@ -1,5 +1,5 @@
 Appel AJAX -  Studi dynamiser vos sites web avec Javaszcript
-
+https://github.com/ThomasBDC/StudiLive2022ProjetJS
 
 Barre de recherche : on interroge la BD sans rechargement de l’URL
  Methode : POST
@@ -60,5 +60,41 @@ puis par défaut dans le html dans la div users-container
    rajouter du délai avec delay
     const url = "https://reqres.in/api/users?delay=2&page=" + numeroPage;
 
+Live 3 
+CRUD 
+Postman : requete AJAX 
+http verbs: GET / POST / PUT / DELETE c'est le CRUD
+GET    -> Récupération
+POST   -> Création
+PUT    -> Modification  PATCH -> Modification partielle 
+DELETE -> Suppression
+
+ aller dans la doc et regarder pour CREATE la request, on a besoin d'un body =
+ les deux champs name et job 
++ l'url est https://reqres.in/api/users on n'a pas besoin de la page 
+
+pour vérifier que la requête focntionne, 
+F12 / Network Fetch/XHR / Name choisir users cliquer puis Payload
+
+On a besoin de:
+- XMLHttpRequest = objet 
+- URL= https://reqres.in/api/users
+- Méthode /verb = POST 
+- content-type: à l'intérieur du colis je veux du json xhr.setRequestHeader("Content-Type", "application/json;
+charset=UTF-8");
+- le contenu de ma requête (mes paramètres)
+let myForm =  new FormData();
+  myForm.append('name', 'Cyril');
+  myForm.append('job', 'Développeur');
+  var object = {};
+  myForm.forEach((value,key) => object[key] = value);
+  var json = JSON.stringify(object);
 
 
+
+retour de l'appel ajax 
+myForm on envoie le formulaire on crée un objet FormData , on définie le contenu , puis on 
+convertit l'object en json 
+et on envoie 
+
+API Fetch
